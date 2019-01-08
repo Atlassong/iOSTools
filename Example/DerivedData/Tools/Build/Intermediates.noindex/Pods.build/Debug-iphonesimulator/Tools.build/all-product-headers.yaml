@@ -1,0 +1,80 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/atlas/GitHub/iOSTools/Example/DerivedData/Tools/Build/Products/Debug-iphonesimulator/Pods_Tools_Example.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "Pods-Tools_Example-umbrella.h",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Example/Pods/Target Support Files/Pods-Tools_Example/Pods-Tools_Example-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "Pods_Tools_Example-Swift.h",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Example/DerivedData/Tools/Build/Products/Debug-iphonesimulator/Pods_Tools_Example.framework/Headers/Pods_Tools_Example-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/atlas/GitHub/iOSTools/Example/DerivedData/Tools/Build/Products/Debug-iphonesimulator/Pods_Tools_Example.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Example/DerivedData/Tools/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Pods-Tools_Example.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/atlas/GitHub/iOSTools/Example/DerivedData/Tools/Build/Products/Debug-iphonesimulator/Tools/Tools.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "CommonFunc.h",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Tools/Classes/CommMethod/CommonFunc.h"
+        },
+        {
+          'type': 'file',
+          'name': "NSString+Widget.h",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Tools/Classes/Category/NSString+Widget.h"
+        },
+        {
+          'type': 'file',
+          'name': "Tools-Swift.h",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Example/DerivedData/Tools/Build/Products/Debug-iphonesimulator/Tools/Tools.framework/Headers/Tools-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "Tools-umbrella.h",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Example/Pods/Target Support Files/Tools/Tools-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIColor+Widget.h",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Tools/Classes/Category/UIColor+Widget.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIView+Additions.h",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Tools/Classes/Category/UIView+Additions.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/atlas/GitHub/iOSTools/Example/DerivedData/Tools/Build/Products/Debug-iphonesimulator/Tools/Tools.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/atlas/GitHub/iOSTools/Example/DerivedData/Tools/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Tools.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}
