@@ -22,7 +22,7 @@
 - (void)fo_performReject:(BOOL (^)(id, id))block
 {
     NSParameterAssert(block);
-    return [self mmp_performSelect:^BOOL(id object, id key) {
+    return [self fo_performSelect:^BOOL(id object, id key) {
         if (block) {
             return !block(object, key);
         }

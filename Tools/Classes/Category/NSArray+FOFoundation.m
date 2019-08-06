@@ -103,13 +103,13 @@
 - (NSArray *)fo_select:(BOOL (^)(id, NSUInteger))block
 {
     NSParameterAssert(block);
-    return [self mmp_filter:block];
+    return [self fo_filter:block];
 }
 
 - (NSArray *)fo_reject:(BOOL (^)(id, NSUInteger))block
 {
     NSParameterAssert(block);
-    return [self mmp_select:^BOOL(id object, NSUInteger index) {
+    return [self fo_select:^BOOL(id object, NSUInteger index) {
         if (block) {
             return !block(object, index);
         }
@@ -151,12 +151,12 @@
 
 - (BOOL)fo_notAny:(BOOL (^)(id, NSUInteger))block
 {
-    return ![self mmp_some:block];
+    return ![self fo_some:block];
 }
 
 - (BOOL)fo_notEvery:(BOOL (^)(id, NSUInteger))block
 {
-    return ![self mmp_every:block];
+    return ![self fo_every:block];
 }
 
 - (instancetype)fo_evenIndexObjects {
@@ -196,7 +196,7 @@
 
 - (NSString *)fo_join:(NSString *)seperator {
     NSMutableString *string = [NSMutableString string];
-    [self mmp_each:^(id obj, NSUInteger index) {
+    [self fo_each:^(id obj, NSUInteger index) {
         if (index != 0) {
             [string appendString:seperator];
         }
@@ -206,7 +206,7 @@
 }
 
 - (BOOL)fo_existObjectMatch:(BOOL (^)(id obj, NSUInteger index))block {
-    return [self mmp_match:block] != nil;
+    return [self fo_match:block] != nil;
 }
 
 - (NSArray *)fo_groupBy:(id (^)(id obj))block {
@@ -226,7 +226,7 @@
 
 - (NSArray *)fo_zip:(NSArray *)array {
     NSMutableArray *result = [NSMutableArray array];
-    [self mmp_each:^(id obj, NSUInteger index) {
+    [self fo_each:^(id obj, NSUInteger index) {
         [result addObject:obj];
         if (index >= array.count) return;
         [result addObject:array[index]];
@@ -237,7 +237,7 @@
 - (NSString *)fo_insertIntoPlaceHolderString:(NSString *)placeHolder {
     NSArray *components = [placeHolder componentsSeparatedByString:@"%%"];
     if ([components count] < 2) return placeHolder;
-    return [[components mmp_zip:self] mmp_join:@""];
+    return [[components fo_zip:self] fo_join:@""];
 }
 
 - (id)fo_reduce:(id)initial withBlock:(id (^)(id sum, id obj))block {
@@ -280,7 +280,7 @@
         if (i + length <= self.count) {
             [array addObject:[self subarrayWithRange:(NSRange){i, length}]];
         } else {
-            [array addObject:[self mmp_last:self.count - i]];
+            [array addObject:[self fo_last:self.count - i]];
         }
     }
     return array;

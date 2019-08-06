@@ -94,13 +94,13 @@
 - (NSDictionary *)fo_select:(BOOL (^)(id, id))block
 {
     NSParameterAssert(block);
-    return [self mmp_filter:block];
+    return [self fo_filter:block];
 }
 
 - (NSDictionary *)fo_reject:(BOOL (^)(id, id))block
 {
     NSParameterAssert(block);
-    return [self mmp_select:^BOOL(id object, id key) {
+    return [self fo_select:^BOOL(id object, id key) {
         if (block) {
             return !block(object, key);
         }
@@ -142,12 +142,12 @@
 
 - (BOOL)fo_notAny:(BOOL (^)(id, id))block
 {
-    return ![self mmp_some:block];
+    return ![self fo_some:block];
 }
 
 - (BOOL)fo_notEvery:(BOOL (^)(id, id))block
 {
-    return ![self mmp_every:block];
+    return ![self fo_every:block];
 }
 
 - (void)fo_mergeToDestinationDic:(NSMutableDictionary *)mergedDic withAnotherDic:(NSDictionary *)dic
@@ -165,7 +165,7 @@
         id dst = merged[key];
         if (dst) {
             if ([src isKindOfClass:[NSDictionary class]] && [dst isKindOfClass:[NSDictionary class]]) {
-                merged[key] = [dst mmp_merge:src];
+                merged[key] = [dst fo_merge:src];
             } else {
                 merged[key] = src;
             }
