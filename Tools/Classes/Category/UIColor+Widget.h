@@ -12,5 +12,5 @@
 
 + (UIColor *)colorWithHexString: (NSString *)stringToConvert;
 + (UIColor *)colorWithHexString: (NSString *)stringToConvert withAlpha:(float)alpha;
-+ (NSString *)toHexString;
+- (NSString *)toHexString;
 @end

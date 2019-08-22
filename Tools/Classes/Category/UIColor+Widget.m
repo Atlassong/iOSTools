@@ -79,8 +79,8 @@
                            alpha:alpha];
 }
 
-+ (NSString *)toHexString {
-    CGFloat *components = CGColorGetComponents(self.CGColor);
+- (NSString *)toHexString {
+    const CGFloat *components = CGColorGetComponents(self.CGColor);
     CGFloat r = components[0];
     CGFloat g = components[1];
     CGFloat b = components[2];
