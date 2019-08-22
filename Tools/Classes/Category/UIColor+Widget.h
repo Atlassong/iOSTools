@@ -10,6 +10,7 @@
 
 @interface UIColor (Widget)
 
-+ (UIColor *) colorWithHexString: (NSString *) stringToConvert;
-+ (UIColor *) colorWithHexString: (NSString *) stringToConvert withAlpha:(float)alpha;
++ (UIColor *)colorWithHexString: (NSString *)stringToConvert;
++ (UIColor *)colorWithHexString: (NSString *)stringToConvert withAlpha:(float)alpha;
++ (NSString *)toHexString;
 @end
