@@ -10,6 +10,10 @@
 #endif
 #endif
 
+#import "NSArray+FOFoundation.h"
+#import "NSDictionary+FOFoundation.h"
+#import "NSMutableArray+FOFoundation.h"
+#import "NSMutableDictionary+FOFoundation.h"
 #import "NSString+Widget.h"
 #import "UIColor+Widget.h"
 #import "UIView+Additions.h"
