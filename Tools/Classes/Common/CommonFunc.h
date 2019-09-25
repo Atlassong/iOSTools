@@ -7,13 +7,20 @@
 //
 
 typedef NS_ENUM(NSInteger,DevicesType){
-    Devices_4Inch,
-    Devices_47Inch,
-    Devices_55Inch,
-    Devices_58Inch,
-    Devices_61Inch,
-    Devices_65Inch,
-    Devices_NoSupport
+    Iphone_320_568_Point,
+    Iphone_375_667_Point,
+    Iphone_375_812_Point,
+    Iphone_414_736_Point,
+    Iphone_414_896_Point,
+    Iphone_No_Support
+};
+
+typedef NS_ENUM(NSInteger,DevicesTypeForIpad){
+    Ipad_768_1024_Point,
+    Ipad_834_1112_Point,
+    Ipad_834_1194_Point,
+    Ipad_1024_1366_Point,
+    Ipad_No_Supprot,
 };
 
 @interface CommonFunc : NSObject
@@ -22,4 +29,5 @@ typedef NS_ENUM(NSInteger,DevicesType){
 + (NSString *)app_Version;
 + (NSString *)app_BuildVersion;
 + (DevicesType)devicesType;
++ (DevicesTypeForIpad)devicesIpadType;
 @end
