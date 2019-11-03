@@ -9,8 +9,6 @@
 
 @implementation SKNode (LGHit)
 - (void)hitByFileName:(NSString *)fileName waitForCompletion:(BOOL)waitForCompletion {
-    if ([[SoundManager instance].preLoadHitSound objectForKey:fileName] && [Configuration instance].playActionMusic) {
-        [self runAction:[[SoundManager instance].preLoadHitSound objectForKey:fileName]];
-    }
+	[self runAction:[SKAction playSoundFileNamed:fileName waitForCompletion:waitForCompletion]];
 }
 @end

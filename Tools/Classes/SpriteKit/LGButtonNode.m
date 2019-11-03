@@ -8,6 +8,7 @@
 
 #import "LGButtonNode.h"
 #import <objc/message.h>
+#import "SKNode+LGHit.h"
 
 @interface LGButtonNode()
 @property (nonatomic, copy) NSString *image;
