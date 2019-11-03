@@ -137,8 +137,6 @@
     
     if (self.actionMusicName) {
         [self hitByFileName:self.actionMusicName waitForCompletion:YES];
-    } else {
-        [self hitByFileName:MUSIC_CLICK waitForCompletion:YES];
     }
 }
 
