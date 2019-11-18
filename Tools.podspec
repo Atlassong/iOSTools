@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Tools'
   s.version          = '0.2.0'
-  s.summary          = 'A short description of Tools.'
+  s.summary          = 'iOS开发基础工程库，集成常见方法.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,17 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  iOS开发基础工程库，集成常见方法
                        DESC
 
   s.homepage         = 'https://github.com/xiang.song/Tools'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'xiang.song' => 'xiang.song@dianping.com' }
+  s.author           = { 'xiang.song' => 'songxiang2010@163.com' }
   s.source           = { :git => 'git@github.com:Atlassong/iOSTools.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'Tools/Classes/Category/*','Tools/Classes/Common/*','Tools/Classes/SpriteKit/*'
   
@@ -36,7 +36,7 @@ TODO: Add long description of the pod here.
   #   'Tools' => ['Tools/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'CoreTelephony'
+  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.frameworks = 'CoreTelephony', 'Foundation', 'SpriteKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

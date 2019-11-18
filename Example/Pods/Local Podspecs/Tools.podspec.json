@@ -1,25 +1,32 @@
 {
   "name": "Tools",
-  "version": "0.1.4",
-  "summary": "A short description of Tools.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "0.2.0",
+  "summary": "iOS开发基础工程库，集成常见方法.",
+  "description": "iOS开发基础工程库，集成常见方法",
   "homepage": "https://github.com/xiang.song/Tools",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "xiang.song": "xiang.song@dianping.com"
+    "xiang.song": "songxiang2010@163.com"
   },
   "source": {
     "git": "git@github.com:Atlassong/iOSTools.git",
-    "tag": "0.1.4"
+    "tag": "0.2.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "12.0"
   },
   "source_files": [
     "Tools/Classes/Category/*",
-    "Tools/Classes/Common/*"
+    "Tools/Classes/Common/*",
+    "Tools/Classes/SpriteKit/*"
+  ],
+  "public_header_files": "Pod/Classes/**/*.h",
+  "frameworks": [
+    "CoreTelephony",
+    "Foundation",
+    "SpriteKit"
   ]
 }

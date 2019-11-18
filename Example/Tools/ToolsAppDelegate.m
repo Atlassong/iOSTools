@@ -2,17 +2,19 @@
 //  ToolsAppDelegate.m
 //  Tools
 //
-//  Created by xiang.song on 01/08/2019.
+//  Created by ;.song on 01/08/2019.
 //  Copyright (c) 2019 xiang.song. All rights reserved.
 //
 
 #import "ToolsAppDelegate.h"
+#import "Tools.h"
 
 @implementation ToolsAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"%@", [Tools uuid]);
     return YES;
 }
 

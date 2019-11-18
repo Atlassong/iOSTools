@@ -1,16 +1,16 @@
 PODS:
-  - Tools (0.1.4)
+  - Tools (0.2.0)
 
 DEPENDENCIES:
-  - Tools (from `../`)
+  - Tools (from `../Tools.podspec`)
 
 EXTERNAL SOURCES:
   Tools:
-    :path: "../"
+    :path: "../Tools.podspec"
 
 SPEC CHECKSUMS:
-  Tools: 733ff72f0d64e99e55243628ba30be1a858798f7
+  Tools: d45ce39af0aac55816cc76bde4de5b52391ef0f5
 
-PODFILE CHECKSUM: bc46ec87856a18b67c2b6e3972168a3fb5098b4d
+PODFILE CHECKSUM: 546ef5ee07f7f8e34b90dccf1a832065e3058439
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.5.3

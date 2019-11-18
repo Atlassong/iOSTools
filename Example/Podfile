@@ -1,9 +1,9 @@
 use_frameworks!
 
-platform :ios, '8.0'
+platform :ios, '12.0'
 
 target 'Tools_Example' do
-  pod 'Tools', :path => '../'
+  pod 'Tools', :path => '../Tools.podspec'
 
   target 'Tools_Tests' do
     inherit! :search_paths

@@ -17,7 +17,10 @@
 #import "NSString+Widget.h"
 #import "UIColor+Widget.h"
 #import "UIView+Additions.h"
-#import "CommonFunc.h"
+#import "Tools.h"
+#import "LGButtonNode.h"
+#import "SKNode+LGHit.h"
+#import "SKSpriteNode+Additions.h"
 
 FOUNDATION_EXPORT double ToolsVersionNumber;
 FOUNDATION_EXPORT const unsigned char ToolsVersionString[];
