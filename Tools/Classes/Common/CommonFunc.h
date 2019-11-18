@@ -29,5 +29,7 @@ typedef NS_ENUM(NSInteger,DevicesTypeForIpad){
 + (NSString *)app_Version;
 + (NSString *)app_BuildVersion;
 + (DevicesType)devicesType;
++ (NSString *)mobileCarrier;
 + (DevicesTypeForIpad)devicesIpadType;
++ (NSString *)devicesModel;
 @end

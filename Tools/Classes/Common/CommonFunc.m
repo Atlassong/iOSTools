@@ -7,6 +7,9 @@
 //
 
 #import "CommonFunc.h"
+#import <CoreTelephony/CTTelephonyNetworkInfo.h>
+#import "NSDictionary+FOFoundation.h"
+#import <sys/utsname.h>
 
 @implementation CommonFunc
 + (NSString *)iosVersion {
@@ -60,5 +63,23 @@
         return Ipad_1024_1366_Point;
     }
     return Ipad_No_Supprot;
+}
+
++ (NSString *)mobileCarrier {
+    CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
+    NSDictionary<NSString *, CTCarrier *> *carrierDic = [info serviceSubscriberCellularProviders];
+    if (carrierDic.allKeys.count == 0) {
+        return @"无运营商";
+    } else {
+        return [[carrierDic.allValues fo_map:^id(CTCarrier *carrier, NSUInteger index) {
+            return [carrier carrierName];
+        }] componentsJoinedByString:@","];
+    }
+}
+
++ (NSString *)devicesModel {
+    struct utsname systemInfo;
+    uname(&systemInfo);
+    return [NSString stringWithCString:systemInfo.machine encoding:NSASCIIStringEncoding];
 }
 @end
