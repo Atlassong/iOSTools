@@ -17,6 +17,8 @@
 		604C80AC80F9660BF3CD52D10CEDCC45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4458A5F74898A111630E26C8CAC30437 /* Foundation.framework */; };
 		61658A0C2BAB185A163EA22A050408D9 /* SKSpriteNode+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF38DB5645D5787177112FD9967367E /* SKSpriteNode+Additions.m */; };
 		632AA2EB97B1F03366F4A663156D8822 /* Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B307C70BA72E429C06A8ED8A7421F7 /* Tools.m */; };
+		6FDC598E238A71D6003928B5 /* UIButton+BackgroundColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FDC598C238A71D6003928B5 /* UIButton+BackgroundColor.h */; };
+		6FDC598F238A71D6003928B5 /* UIButton+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDC598D238A71D6003928B5 /* UIButton+BackgroundColor.m */; };
 		76094D7DAD7FEF74F59DDC5B53A971C7 /* UIView+Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8252863064EA02B81E9634356CFC341A /* UIView+Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7EFDB6156D48455FDAFDF81C79B7828D /* UIColor+Widget.h in Headers */ = {isa = PBXBuildFile; fileRef = F6E0879481FAA6E64CE3DE88E74EE442 /* UIColor+Widget.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F94D5BB3538751006A91BFFAD0A1117 /* NSString+Widget.m in Sources */ = {isa = PBXBuildFile; fileRef = 18408E69F74CB8221581B44176068459 /* NSString+Widget.m */; };
@@ -61,7 +63,7 @@
 
 /* Begin PBXFileReference section */
 		02A8D942A413C15AE2BFE4C5902D46BF /* Tools-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tools-umbrella.h"; sourceTree = "<group>"; };
-		04C2654C6C7E33F65FFAA7BD533DE9DB /* Pods_Tools_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tools_Example.framework; path = "Pods-Tools_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C2654C6C7E33F65FFAA7BD533DE9DB /* Pods_Tools_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		058AF8CABC585C02F7E7EDD7D21A02D3 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		0EBFBE1A70BB0505FD6E1FD9556AD1D0 /* Tools.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Tools.modulemap; sourceTree = "<group>"; };
 		123D558EC757BA4065121F6459977FCC /* Pods-Tools_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tools_Tests-resources.sh"; sourceTree = "<group>"; };
@@ -70,12 +72,12 @@
 		1BACD424D82DD0F547A3859B5454EBAC /* UIColor+Widget.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Widget.m"; sourceTree = "<group>"; };
 		1D6879CCE4A53B7B44938E769CCC26C4 /* Tools-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Tools-prefix.pch"; sourceTree = "<group>"; };
 		22B4F8538758CBCBF2774FE7C00FF8D2 /* Pods-Tools_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tools_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2BC75D7E45F83606198120C482109451 /* Pods-Tools_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tools_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3094FA2E4EA81763A1182F35E9D1B622 /* NSArray+FOFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FOFoundation.m"; sourceTree = "<group>"; };
 		312B6346C01AA2D981E2A3BB071EEB01 /* LGButtonNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = LGButtonNode.h; sourceTree = "<group>"; };
 		344CAB7CD98EAFB6011A4CD0375A4332 /* SKNode+LGHit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKNode+LGHit.h"; sourceTree = "<group>"; };
-		3DDB2DAF17D23B7BA05B2102588E34E2 /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Tools.framework; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DDB2DAF17D23B7BA05B2102588E34E2 /* Tools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Tools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4458A5F74898A111630E26C8CAC30437 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4C3A2BB03DC2DFF45F78986D78CF3410 /* Tools-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Tools-dummy.m"; sourceTree = "<group>"; };
 		4DD1E95DB853BC02245BD6D1E3FE9C42 /* Pods-Tools_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tools_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,11 +89,13 @@
 		6AEADF87DC28A713042D85BD4A9603AE /* NSArray+FOFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSArray+FOFoundation.h"; sourceTree = "<group>"; };
 		6E59FA742F992081B5EAD27FE5C1E6EF /* Pods-Tools_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tools_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6F05952E3BC3871B006BB1FEAA081A3E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FDC598C238A71D6003928B5 /* UIButton+BackgroundColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+BackgroundColor.h"; sourceTree = "<group>"; };
+		6FDC598D238A71D6003928B5 /* UIButton+BackgroundColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BackgroundColor.m"; sourceTree = "<group>"; };
 		81A1F3975466DD1B13AB93B5CDB7321E /* NSMutableDictionary+FOFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+FOFoundation.m"; sourceTree = "<group>"; };
 		8252863064EA02B81E9634356CFC341A /* UIView+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+Additions.h"; sourceTree = "<group>"; };
 		86AD68C80A4EF07D336A46A1AA4B727F /* NSString+Widget.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+Widget.h"; sourceTree = "<group>"; };
-		909168EF826D315A1FA4C239E1670A0E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		9107EB9ED1273BDECD07916F57319136 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		909168EF826D315A1FA4C239E1670A0E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9107EB9ED1273BDECD07916F57319136 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		92B6F3FE30A70BA6539D5898B990264B /* Tools.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tools.xcconfig; sourceTree = "<group>"; };
 		967B21A9583674BB7C4FB3F0119CDAB1 /* Pods-Tools_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tools_Example-resources.sh"; sourceTree = "<group>"; };
 		A286E69DF28BD4C5D0182DA5F001BAB9 /* Tools.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Tools.h; sourceTree = "<group>"; };
@@ -106,10 +110,10 @@
 		C29924033F24695CD40A6B95E511A72C /* NSMutableArray+FOFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+FOFoundation.h"; sourceTree = "<group>"; };
 		C33E9D67CF9343144161698FA063AE4E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7A6186360E728BFA943A7CBAF55AF69 /* NSDictionary+FOFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FOFoundation.m"; sourceTree = "<group>"; };
-		CE20A7EB0B291DB2E4BE9EEF42BDE984 /* Tools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Tools.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CE20A7EB0B291DB2E4BE9EEF42BDE984 /* Tools.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Tools.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D630309612509551BAB7F79A749EB2C1 /* NSMutableArray+FOFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+FOFoundation.m"; sourceTree = "<group>"; };
 		D95B6D585AF4A7E01DDC3636ED0E0238 /* Pods-Tools_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tools_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D9A63CDF1D269EF9919095EA66D9495F /* Pods_Tools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Tools_Tests.framework; path = "Pods-Tools_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9A63CDF1D269EF9919095EA66D9495F /* Pods_Tools_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tools_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDED4EFD144892F46C2805E830DE15E1 /* SKSpriteNode+Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SKSpriteNode+Additions.h"; sourceTree = "<group>"; };
 		E050AE9D244A7D01AA387387AB41727D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECD3075D8AFA9D42583E32B2DCADDAE8 /* Pods-Tools_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tools_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 				1BACD424D82DD0F547A3859B5454EBAC /* UIColor+Widget.m */,
 				8252863064EA02B81E9634356CFC341A /* UIView+Additions.h */,
 				C042EC36E75334FF586D6163EEA46E8B /* UIView+Additions.m */,
+				6FDC598C238A71D6003928B5 /* UIButton+BackgroundColor.h */,
+				6FDC598D238A71D6003928B5 /* UIButton+BackgroundColor.m */,
 			);
 			name = Category;
 			path = Tools/Classes/Category;
@@ -340,6 +346,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FDC598E238A71D6003928B5 /* UIButton+BackgroundColor.h in Headers */,
 				FFFC97DF3C1A60A66C12199C570F8F6B /* Pods-Tools_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +507,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D163FA0CB03282AFA1C5FB79A9DF72B3 /* Pods-Tools_Example-dummy.m in Sources */,
+				6FDC598F238A71D6003928B5 /* UIButton+BackgroundColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,8 +759,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
