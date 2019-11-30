@@ -33,6 +33,10 @@
     return [infoDictionary objectForKey:@"CFBundleVersion"];
 }
 
++ (NSString *)app_BundleId {
+    return [[NSBundle mainBundle] bundleIdentifier];
+}
+
 + (NSString *)mobileCarrier {
     CTTelephonyNetworkInfo *info = [[CTTelephonyNetworkInfo alloc] init];
     NSDictionary<NSString *, CTCarrier *> *carrierDic = [info serviceSubscriberCellularProviders];

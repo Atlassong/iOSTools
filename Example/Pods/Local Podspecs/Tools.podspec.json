@@ -1,6 +1,6 @@
 {
   "name": "Tools",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "summary": "iOS开发基础工程库，集成常见方法.",
   "description": "iOS开发基础工程库，集成常见方法",
   "homepage": "https://github.com/xiang.song/Tools",
@@ -13,20 +13,40 @@
   },
   "source": {
     "git": "git@github.com:Atlassong/iOSTools.git",
-    "tag": "0.2.0"
+    "tag": "0.2.2"
   },
   "platforms": {
     "ios": "12.0"
   },
-  "source_files": [
-    "Tools/Classes/Category/*",
-    "Tools/Classes/Common/*",
-    "Tools/Classes/SpriteKit/*"
-  ],
-  "public_header_files": "Pod/Classes/**/*.h",
   "frameworks": [
     "CoreTelephony",
     "Foundation",
     "SpriteKit"
+  ],
+  "dependencies": {
+    "AFNetworking": [
+      "~> 3.1.0"
+    ],
+    "ReactiveObjC": [
+      "3.1.1"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Network",
+      "source_files": "Tools/Classes/Network/*"
+    },
+    {
+      "name": "SpriteKit",
+      "source_files": "Tools/Classes/SpriteKit/*"
+    },
+    {
+      "name": "Category",
+      "source_files": "Tools/Classes/Category/*"
+    },
+    {
+      "name": "Common",
+      "source_files": "Tools/Classes/Common/*"
+    }
   ]
 }

@@ -30,13 +30,23 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Tools/Classes/Category/*','Tools/Classes/Common/*','Tools/Classes/SpriteKit/*'
-  
-  # s.resource_bundles = {
-  #   'Tools' => ['Tools/Assets/*.png']
-  # }
+  s.subspec 'Network' do |a|
+    a.source_files = 'Tools/Classes/Network/*'
+  end
 
-  s.public_header_files = 'Pod/Classes/**/*.h'
+  s.subspec 'SpriteKit' do |a|
+    a.source_files = 'Tools/Classes/SpriteKit/*'
+  end
+
+  s.subspec 'Category' do |a|
+    a.source_files = 'Tools/Classes/Category/*'
+  end
+
+  s.subspec 'Common' do |a|
+    a.source_files = 'Tools/Classes/Common/*'
+  end
+
   s.frameworks = 'CoreTelephony', 'Foundation', 'SpriteKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AFNetworking', '~> 3.1.0'
+  s.dependency 'ReactiveObjC', '3.1.1'
 end

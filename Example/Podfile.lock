@@ -1,16 +1,57 @@
 PODS:
-  - Tools (0.2.0)
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - ReactiveObjC (3.1.1)
+  - Tools (0.2.2):
+    - AFNetworking (~> 3.1.0)
+    - ReactiveObjC (= 3.1.1)
+    - Tools/Category (= 0.2.2)
+    - Tools/Common (= 0.2.2)
+    - Tools/Network (= 0.2.2)
+    - Tools/SpriteKit (= 0.2.2)
+  - Tools/Category (0.2.2):
+    - AFNetworking (~> 3.1.0)
+    - ReactiveObjC (= 3.1.1)
+  - Tools/Common (0.2.2):
+    - AFNetworking (~> 3.1.0)
+    - ReactiveObjC (= 3.1.1)
+  - Tools/Network (0.2.2):
+    - AFNetworking (~> 3.1.0)
+    - ReactiveObjC (= 3.1.1)
+  - Tools/SpriteKit (0.2.2):
+    - AFNetworking (~> 3.1.0)
+    - ReactiveObjC (= 3.1.1)
 
 DEPENDENCIES:
   - Tools (from `../Tools.podspec`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - ReactiveObjC
 
 EXTERNAL SOURCES:
   Tools:
     :path: "../Tools.podspec"
 
 SPEC CHECKSUMS:
-  Tools: d45ce39af0aac55816cc76bde4de5b52391ef0f5
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  Tools: adf38ae1567e20edc83f4eec98665645224f57c7
 
-PODFILE CHECKSUM: 546ef5ee07f7f8e34b90dccf1a832065e3058439
+PODFILE CHECKSUM: b77948f7ddc309dd945a5380a4030f537b90ba10
 
 COCOAPODS: 1.5.3
