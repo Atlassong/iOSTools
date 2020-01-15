@@ -8,6 +8,7 @@
 
 #import "ToolsAppDelegate.h"
 #import "Tools.h"
+#import <Tools/AppManager.h>
 
 @implementation ToolsAppDelegate
 
@@ -15,6 +16,7 @@
 {
     // Override point for customization after application launch.
     NSLog(@"%@", [Tools uuid]);
+    [AppManager uploadUserInfo];
     return YES;
 }
 

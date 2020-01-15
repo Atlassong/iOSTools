@@ -7,7 +7,7 @@
 
 #import "NetworkClient.h"
 #import "AFHTTPSessionManager.h"
-#import "NSArray+FOFoundation.h"
+#import <Tools/NSArray+FOFoundation.h>
 #import <Tools/Tools.h>
 #import <Tools/NSDictionary+FOFoundation.h>
 

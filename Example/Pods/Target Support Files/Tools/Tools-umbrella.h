@@ -19,6 +19,7 @@
 #import "UIColor+Widget.h"
 #import "UIView+Additions.h"
 #import "Tools.h"
+#import "AppManager.h"
 #import "NetworkClient.h"
 #import "LGButtonNode.h"
 #import "SKNode+LGHit.h"

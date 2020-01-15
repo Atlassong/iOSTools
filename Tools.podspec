@@ -46,6 +46,10 @@ Pod::Spec.new do |s|
     a.source_files = 'Tools/Classes/Common/*'
   end
 
+  s.subspec 'Function' do |a|
+    a.source_files = 'Tools/Classes/Function/*'
+  end
+
   s.frameworks = 'CoreTelephony', 'Foundation', 'SpriteKit'
   s.dependency 'AFNetworking', '~> 3.1.0'
   s.dependency 'ReactiveObjC', '3.1.1'
