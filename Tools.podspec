@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Tools'
-  s.version          = '0.2.4'
+  s.version          = '0.2.5'
   s.summary          = 'iOS开发基础工程库，集成常见方法.'
 
 # This description is used to generate tags and improve search results.
