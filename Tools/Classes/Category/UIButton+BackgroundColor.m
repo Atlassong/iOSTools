@@ -34,6 +34,9 @@ static NSString *cs_stringForUIControlStateSelected       = @"cs_stringForUICont
     }
 
     [self.cs_dictBackgroundColor setObject:backgroundColor forKey:[self cs_stringForUIControlState:state]];
+    if (state == UIControlStateNormal) {
+        self.backgroundColor = backgroundColor;
+    }
 }
 
 - (NSString *)cs_stringForUIControlState:(UIControlState)state {
@@ -60,8 +63,13 @@ static NSString *cs_stringForUIControlStateSelected       = @"cs_stringForUICont
 
 #pragma mark - highlighted
 - (void)setHighlighted:(BOOL)highlighted {
+    [super setHighlighted:highlighted];
     if (highlighted) {
-        self.backgroundColor = (UIColor *)[self.cs_dictBackgroundColor objectForKey:cs_stringForUIControlStateHighlighted];
+        UIColor *highlightedColor = (UIColor *)[self.cs_dictBackgroundColor objectForKey:cs_stringForUIControlStateHighlighted];
+        if (!highlightedColor) {
+            highlightedColor = (UIColor *)[self.cs_dictBackgroundColor objectForKey:cs_stringForUIControlStateNormal];
+        }
+        self.backgroundColor = highlightedColor;
     } else {
         self.backgroundColor = (UIColor *)[self.cs_dictBackgroundColor objectForKey:cs_stringForUIControlStateNormal];
     }
