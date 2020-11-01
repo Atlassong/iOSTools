@@ -137,7 +137,7 @@
     self.buttonPressed = YES;
     
     if (self.actionMusicName) {
-        [self hitByFileName:self.actionMusicName waitForCompletion:YES];
+        [self beepByName:self.actionMusicName waitForCompletion:YES];
     }
 }
 
