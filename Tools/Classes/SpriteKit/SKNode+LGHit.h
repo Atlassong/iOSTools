@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SKNode (LGHit)
-- (void)hitByFileName:(NSString *)fileName waitForCompletion:(BOOL)waitForCompletion;
+- (void)beepByName:(NSString *)fileName waitForCompletion:(BOOL)waitForCompletion;
 @end
 
 NS_ASSUME_NONNULL_END

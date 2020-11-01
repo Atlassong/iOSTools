@@ -8,7 +8,7 @@
 #import "SKNode+LGHit.h"
 
 @implementation SKNode (LGHit)
-- (void)hitByFileName:(NSString *)fileName waitForCompletion:(BOOL)waitForCompletion {
+- (void)beepByName:(NSString *)fileName waitForCompletion:(BOOL)waitForCompletion {
 	[self runAction:[SKAction playSoundFileNamed:fileName waitForCompletion:waitForCompletion]];
 }
 @end
