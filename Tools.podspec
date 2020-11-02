@@ -51,6 +51,5 @@ Pod::Spec.new do |s|
   end
 
   s.frameworks = 'CoreTelephony', 'Foundation', 'SpriteKit'
-  s.dependency 'AFNetworking', '~> 3.1.0'
   s.dependency 'ReactiveObjC', '3.1.1'
 end
