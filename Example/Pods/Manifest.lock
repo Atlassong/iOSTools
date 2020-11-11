@@ -1,50 +1,28 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AFNetworking/UIKit (3.1.0):
-    - AFNetworking/NSURLSession
   - ReactiveObjC (3.1.1)
-  - Tools (0.2.3):
-    - AFNetworking (~> 3.1.0)
+  - Tools (0.3.4):
     - ReactiveObjC (= 3.1.1)
-    - Tools/Category (= 0.2.3)
-    - Tools/Common (= 0.2.3)
-    - Tools/Function (= 0.2.3)
-    - Tools/Network (= 0.2.3)
-    - Tools/SpriteKit (= 0.2.3)
-  - Tools/Category (0.2.3):
-    - AFNetworking (~> 3.1.0)
+    - Tools/Category (= 0.3.4)
+    - Tools/Common (= 0.3.4)
+    - Tools/Function (= 0.3.4)
+    - Tools/Network (= 0.3.4)
+    - Tools/SpriteKit (= 0.3.4)
+  - Tools/Category (0.3.4):
     - ReactiveObjC (= 3.1.1)
-  - Tools/Common (0.2.3):
-    - AFNetworking (~> 3.1.0)
+  - Tools/Common (0.3.4):
     - ReactiveObjC (= 3.1.1)
-  - Tools/Function (0.2.3):
-    - AFNetworking (~> 3.1.0)
+  - Tools/Function (0.3.4):
     - ReactiveObjC (= 3.1.1)
-  - Tools/Network (0.2.3):
-    - AFNetworking (~> 3.1.0)
+  - Tools/Network (0.3.4):
     - ReactiveObjC (= 3.1.1)
-  - Tools/SpriteKit (0.2.3):
-    - AFNetworking (~> 3.1.0)
+  - Tools/SpriteKit (0.3.4):
     - ReactiveObjC (= 3.1.1)
 
 DEPENDENCIES:
   - Tools (from `../Tools.podspec`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - AFNetworking
+  https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - ReactiveObjC
 
 EXTERNAL SOURCES:
@@ -52,10 +30,9 @@ EXTERNAL SOURCES:
     :path: "../Tools.podspec"
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
-  Tools: d29e89bb3a68f13cfa37d52e3142c5453d9e2831
+  Tools: 9e3b4da6f8d93844d0858282a0790574d4db3e8f
 
 PODFILE CHECKSUM: b77948f7ddc309dd945a5380a4030f537b90ba10
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.10.0

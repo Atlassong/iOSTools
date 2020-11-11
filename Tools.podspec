@@ -30,10 +30,6 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.0'
 
-  s.subspec 'Network' do |a|
-    a.source_files = 'Tools/Classes/Network/*'
-  end
-
   s.subspec 'SpriteKit' do |a|
     a.source_files = 'Tools/Classes/SpriteKit/*'
   end
@@ -51,6 +47,5 @@ Pod::Spec.new do |s|
   end
 
   s.frameworks = 'CoreTelephony', 'Foundation', 'SpriteKit'
-  s.dependency 'AFNetworking/NSURLSession', '~> 3.1.0'
   s.dependency 'ReactiveObjC', '3.1.1'
 end
