@@ -30,6 +30,8 @@ typedef void(^NodeTouchBlock)(LGButtonNode *);
 
 + (instancetype)buttonWithTextLabel:(NSString *)label btnClick:(NodeTouchBlock)nodeClick;
 
+
+- (void)buttonWithActiveImage:(nullable NSString *)image normalImage:(NSString *)normalImage btnClick:(NodeTouchBlock)nodeClick;
 @end
 
 NS_ASSUME_NONNULL_END

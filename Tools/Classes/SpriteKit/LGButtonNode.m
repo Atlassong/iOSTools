@@ -19,6 +19,33 @@
 @end
 
 @implementation LGButtonNode
+//init with sks file
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        
+    }
+    return self;
+}
+
+- (void)buttonWithActiveImage:(nullable NSString *)image normalImage:(NSString *)normalImage btnClick:(NodeTouchBlock)nodeClick {
+    _enable = YES;
+    self.userInteractionEnabled = YES;
+    self.buttonPressed = NO;
+    
+    self.normalSprite = [SKSpriteNode spriteNodeWithImageNamed:normalImage];
+    self.normalSprite.position = CGPointMake(self.normalSprite.size.width / 2.0, self.normalSprite.size.height / 2.0);
+    self.activeSprite = [self activeSpriteWithActiveImage:image normalImage:normalImage];
+    self.activeSprite.position = CGPointMake(self.normalSprite.size.width / 2.0, self.normalSprite.size.height / 2.0);
+
+    [self addChild:self.activeSprite];
+    [self addChild:self.normalSprite];
+    
+    self.activeSprite.hidden = YES;
+    self.normalSprite.hidden = NO;
+    
+    _nodeTouchBlock = nodeClick;
+    self.size = self.normalSprite.size;
+}
 
 + (instancetype)buttonWithActiveImage:(nullable NSString *)image normalImage:(NSString *)normalImage btnClick:(NodeTouchBlock)nodeClick {
     return [[LGButtonNode alloc] initWithActiveImage:image normalImage:normalImage btnClick:nodeClick];
@@ -62,7 +89,10 @@
         self.buttonPressed = NO;
         self.normalSprite = [SKSpriteNode spriteNodeWithImageNamed:normalImage];
         self.activeSprite = [self activeSpriteWithActiveImage:image normalImage:normalImage];
-
+        
+        
+        
+        
         [self addChild:self.activeSprite];
         [self addChild:self.normalSprite];
         
