@@ -246,4 +246,12 @@
         }
     }
 }
+
+- (void)setSize:(CGSize)size {
+    [super setSize:size];
+    for (SKSpriteNode *node in self.children) {
+        node.size = size;
+        node.position = CGPointMake(node.size.width / 2.0, node.size.height / 2.0f);
+    }
+}
 @end
