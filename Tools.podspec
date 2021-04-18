@@ -46,6 +46,10 @@ Pod::Spec.new do |s|
     a.source_files = 'Tools/Classes/Function/*'
   end
 
+  s.subspec 'GlyphLabel' do |a|
+    a.source_files = 'Tools/Classes/GlyphLabel/*'
+  end
+
   s.frameworks = 'CoreTelephony', 'Foundation', 'SpriteKit'
   s.dependency 'ReactiveObjC', '3.1.1'
 end
