@@ -36,7 +36,7 @@
     return [[self alloc] initWithText:text font:font];
 }
 
-- (id) initWithText:(NSString *)text font:(BMGlyphFont *)font
+- (id)initWithText:(NSString *)text font:(BMGlyphFont *)font
 {
     if ((self = [super init]))
     {
@@ -316,5 +316,16 @@
     }
     CGFloat percent = self.progress / self.totalTime;
     return self.startingValue + (percent * (self.destinationValue - self.startingValue));
+}
+
+- (void)setLabelClick:(GMGLabelClick)labelClick {
+    _labelClick = labelClick;
+    self.userInteractionEnabled = YES;
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (self.labelClick) {
+        self.labelClick();
+    }
 }
 @end

@@ -10,6 +10,7 @@
 #import <Tools/NSArray+FOFoundation.h>
 #import <Tools/Tools.h>
 #import <Tools/NSDictionary+FOFoundation.h>
+#import <AFNetworking/AFHTTPSessionManager.h>
 
 @implementation NetworkClient
 static NetworkClient *_networkClient;
@@ -54,19 +55,19 @@ static NetworkClient *_networkClient;
     NSString *url= [NSString stringWithFormat:@"%@/%@", @"https://www.ilianliankan.com", urlPath];
     return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
         if (type == Request_Get) {
-            [manager GET:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
-               //请求成功返回数据 根据responseSerializer 返回不同的数据格式
-               if ([responseObject isKindOfClass:[NSDictionary class]] && responseObject[@"code"]) {
-                   if ([responseObject[@"code"] integerValue] == 200) {
-                       [subscriber sendNext:responseObject[@"response"]];
-                   }
-               }
-           } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-               //请求失败
-               [subscriber sendError:error];
-           }];
+            [manager GET:url parameters:parameters headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                //请求成功返回数据 根据responseSerializer 返回不同的数据格式
+                if ([responseObject isKindOfClass:[NSDictionary class]] && responseObject[@"code"]) {
+                    if ([responseObject[@"code"] integerValue] == 200) {
+                        [subscriber sendNext:responseObject[@"response"]];
+                    }
+                }
+            } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                //请求失败
+                [subscriber sendError:error];
+            }];
         } else {
-            [manager POST:url parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary *responseObject) {
+            [manager POST:url parameters:parameters headers:nil progress:^(NSProgress * _Nonnull uploadProgress) {} success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
                 //请求成功返回数据 根据responseSerializer 返回不同的数据格式
                 if ([responseObject isKindOfClass:[NSDictionary class]] && responseObject[@"code"]) {
                     if ([responseObject[@"code"] integerValue] == 200) {
