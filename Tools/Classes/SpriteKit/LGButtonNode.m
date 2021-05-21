@@ -47,6 +47,12 @@
     self.size = self.normalSprite.size;
 }
 
+- (void)btnClick:(NodeTouchBlock)nodeClick {
+    self.userInteractionEnabled = YES;
+    _nodeTouchBlock = nodeClick;
+    _enable = YES;
+}
+
 + (instancetype)buttonWithActiveImage:(nullable NSString *)image normalImage:(NSString *)normalImage btnClick:(NodeTouchBlock)nodeClick {
     return [[LGButtonNode alloc] initWithActiveImage:image normalImage:normalImage btnClick:nodeClick];
 }

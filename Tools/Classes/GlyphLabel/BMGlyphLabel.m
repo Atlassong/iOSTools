@@ -31,13 +31,11 @@
     return self;
 }
 
-+ (BMGlyphLabel*) labelWithText:(NSString *)text font:(BMGlyphFont *)font
-{
++ (BMGlyphLabel*) labelWithText:(NSString *)text font:(BMGlyphFont *)font {
     return [[self alloc] initWithText:text font:font];
 }
 
-- (id)initWithText:(NSString *)text font:(BMGlyphFont *)font
-{
+- (id)initWithText:(NSString *)text font:(BMGlyphFont *)font {
     if ((self = [super init]))
     {
         self.font = font;
@@ -50,8 +48,7 @@
     return self;
 }
 
-- (void) setTextJustify:(BMGlyphJustify)newTextJustify
-{
+- (void) setTextJustify:(BMGlyphJustify)newTextJustify {
     if (_textJustify != newTextJustify)
     {
         _textJustify = newTextJustify;
@@ -59,8 +56,7 @@
     }
 }
 
-- (void) setHorizontalAlignment:(BMGlyphHorizontalAlignment)newAlign
-{
+- (void) setHorizontalAlignment:(BMGlyphHorizontalAlignment)newAlign {
     if (_horizontalAlignment != newAlign)
     {
         _horizontalAlignment = newAlign;
@@ -69,8 +65,7 @@
     }
 }
 
-- (void) setVerticalAlignment:(BMGlyphVerticalAlignment)newAlign
-{
+- (void) setVerticalAlignment:(BMGlyphVerticalAlignment)newAlign {
     if (_verticalAlignment != newAlign)
     {
         _verticalAlignment = newAlign;
@@ -79,8 +74,7 @@
     }
 }
 
-- (void) setText:(NSString *)newText
-{
+- (void) setText:(NSString *)newText {
     if (![_text isEqualToString:newText])
     {
         _text = newText;
@@ -93,13 +87,11 @@
     _font = font;
 }
 
-- (void) positionLabel
-{
+- (void) positionLabel {
     
 }
 
-- (void) justifyText
-{
+- (void) justifyText {
     CGPoint shift = CGPointZero;
     
     switch (self.horizontalAlignment)
@@ -178,8 +170,7 @@
     }
 }
 
-- (void) updateLabel
-{
+- (void) updateLabel {
     unichar lastCharId = 0;
     CGSize size = CGSizeZero;
     CGPoint pos = CGPointZero;
@@ -318,14 +309,4 @@
     return self.startingValue + (percent * (self.destinationValue - self.startingValue));
 }
 
-- (void)setLabelClick:(GMGLabelClick)labelClick {
-    _labelClick = labelClick;
-    self.userInteractionEnabled = YES;
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if (self.labelClick) {
-        self.labelClick();
-    }
-}
 @end

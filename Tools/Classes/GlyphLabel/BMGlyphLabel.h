@@ -30,9 +30,6 @@ typedef enum _BMGlyphJustify
     BMGlyphJustifyCenter = 3
 } BMGlyphJustify;
 
-typedef void(^GMGLabelClick)(void);
-
-
 @interface BMGlyphLabel : SKNode
 @property (strong, nonatomic) NSString *text;
 @property (assign, nonatomic) BMGlyphHorizontalAlignment horizontalAlignment;
@@ -42,7 +39,6 @@ typedef void(^GMGLabelClick)(void);
 @property (nonatomic) SKColor* color;
 @property (nonatomic) CGFloat colorBlendFactor;
 @property (assign, nonatomic) CGSize totalSize;
-@property (nonatomic, copy) GMGLabelClick labelClick;
 
 - (id) initWithText:(NSString *)text font:(BMGlyphFont *)font;
 
