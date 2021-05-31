@@ -34,6 +34,8 @@ typedef void(^NodeTouchBlock)(LGButtonNode *);
 - (void)buttonWithActiveImage:(nullable NSString *)image normalImage:(NSString *)normalImage btnClick:(NodeTouchBlock)nodeClick;
 
 - (void)btnClick:(NodeTouchBlock)nodeClick;
+
+- (void)layouts;
 @end
 
 NS_ASSUME_NONNULL_END

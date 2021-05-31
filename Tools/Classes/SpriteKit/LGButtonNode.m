@@ -260,4 +260,10 @@
         node.position = CGPointMake(node.size.width / 2.0, node.size.height / 2.0f);
     }
 }
+
+- (void)layouts {
+    for (SKSpriteNode *node in self.children) {
+        node.position = CGPointMake(0.0f, 0.0f);
+    }
+}
 @end
