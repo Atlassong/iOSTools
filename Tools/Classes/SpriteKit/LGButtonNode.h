@@ -30,12 +30,13 @@ typedef void(^NodeTouchBlock)(LGButtonNode *);
 
 + (instancetype)buttonWithTextLabel:(NSString *)label btnClick:(NodeTouchBlock)nodeClick;
 
++ (instancetype)buttonWithTextLabel:(NSString *)label fontSize:(CGFloat)fontSize normalColor:(SKColor *)normalColor activeColor:(SKColor *)activeColor btnClick:(NodeTouchBlock)nodeClick;
+
 
 - (void)buttonWithActiveImage:(nullable NSString *)image normalImage:(NSString *)normalImage btnClick:(NodeTouchBlock)nodeClick;
 
 - (void)btnClick:(NodeTouchBlock)nodeClick;
 
-- (void)layouts;
 @end
 
 NS_ASSUME_NONNULL_END

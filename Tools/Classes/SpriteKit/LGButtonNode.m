@@ -16,13 +16,13 @@
 @property (nonatomic, copy) NSString *disableImage;
 @property (nonatomic, copy) NSString *disableNormalImage;
 @property (nonatomic, copy) NodeTouchBlock nodeTouchBlock;
+@property (nonatomic, strong) SKColor *labelActiveColor;
 @end
 
 @implementation LGButtonNode
-//init with sks file
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        
     }
     return self;
 }
@@ -66,20 +66,27 @@
 }
 
 + (instancetype)buttonWithTextLabel:(NSString *)label btnClick:(NodeTouchBlock)nodeClick {
-    return [[LGButtonNode alloc] initWithtextLabel:label btnClick:nodeClick];
+    return [[LGButtonNode alloc] initWithtextLabel:label fontSize:40.0f normalColor:[SKColor whiteColor] activeColor:[SKColor redColor] btnClick:nodeClick];
 }
 
-- (id)initWithtextLabel:(NSString *)label btnClick:(NodeTouchBlock)nodeClick {
++ (instancetype)buttonWithTextLabel:(NSString *)label fontSize:(CGFloat)fontSize normalColor:(UIColor *)normalColor activeColor:(UIColor *)activeColor btnClick:(NodeTouchBlock)nodeClick {
+    return [[LGButtonNode alloc] initWithtextLabel:label fontSize:fontSize normalColor:normalColor activeColor:activeColor btnClick:nodeClick];
+}
+
+- (id)initWithtextLabel:(NSString *)label fontSize:(CGFloat)fontSize normalColor:(SKColor *)normalColor activeColor:(SKColor *)activeColor btnClick:(NodeTouchBlock)nodeClick {
     if (self = [super init]) {
         self.userInteractionEnabled = YES;
         self.buttonPressed = NO;
         _enable = YES;
+        _labelActiveColor = activeColor;
         
         _labelNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-CondensedExtraBold"];
         _labelNode.text = label;
-        _labelNode.fontSize = 40;
-        _labelNode.fontColor = [SKColor whiteColor];
+        _labelNode.fontSize = fontSize;
+        _labelNode.fontColor = normalColor;
         _labelNode.zPosition = .9;
+        _labelNode.verticalAlignmentMode = SKLabelVerticalAlignmentModeCenter;
+        _labelNode.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeCenter;
         [self addChild:_labelNode];
         
         _nodeTouchBlock = nodeClick;
@@ -95,9 +102,6 @@
         self.buttonPressed = NO;
         self.normalSprite = [SKSpriteNode spriteNodeWithImageNamed:normalImage];
         self.activeSprite = [self activeSpriteWithActiveImage:image normalImage:normalImage];
-        
-        
-        
         
         [self addChild:self.activeSprite];
         [self addChild:self.normalSprite];
@@ -166,7 +170,7 @@
     }
     _buttonActive = !_buttonActive;
     if (_labelNode) {
-        _labelNode.fontColor = [SKColor redColor];
+        _labelNode.fontColor = self.labelActiveColor;
     }
     self.activeSprite.hidden = NO;
     self.normalSprite.hidden = YES;
@@ -255,15 +259,33 @@
 
 - (void)setSize:(CGSize)size {
     [super setSize:size];
-    for (SKSpriteNode *node in self.children) {
-        node.size = size;
-        node.position = CGPointMake(node.size.width / 2.0, node.size.height / 2.0f);
+    [self layoutSubNodes];
+}
+
+- (void)setAnchorPoint:(CGPoint)anchorPoint {
+    [super setAnchorPoint:anchorPoint];
+    [self layoutSubNodes];
+}
+
+- (void)setPosition:(CGPoint)position {
+    [super setPosition:position];
+    [self layoutSubNodes];
+}
+
+- (void)layoutSubNodes {
+    CGPoint centerPoint = CGPointMake(self.size.width / 2.0 - self.anchorPoint.x * self.size.width, self.size.height / 2.0 - self.anchorPoint.y * self.size.height);
+    for (SKNode *node in self.children) {
+        if ([node isKindOfClass:[SKSpriteNode class]]) {
+            ((SKSpriteNode *)node).size = self.size;
+            ((SKSpriteNode *)node).anchorPoint = CGPointMake(0.5f, 0.5f);
+            ((SKSpriteNode *)node).position = centerPoint;
+        }
+        
+        if ([node isKindOfClass:[SKLabelNode class]]) {
+            ((SKLabelNode *)node).position = centerPoint;
+        }
+        
     }
 }
 
-- (void)layouts {
-    for (SKSpriteNode *node in self.children) {
-        node.position = CGPointMake(0.0f, 0.0f);
-    }
-}
 @end
