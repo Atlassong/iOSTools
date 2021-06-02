@@ -17,6 +17,7 @@
 @property (nonatomic, copy) NSString *disableNormalImage;
 @property (nonatomic, copy) NodeTouchBlock nodeTouchBlock;
 @property (nonatomic, strong) SKColor *labelActiveColor;
+@property (nonatomic, strong) SKColor *labelNormalColor;
 @end
 
 @implementation LGButtonNode
@@ -79,6 +80,7 @@
         self.buttonPressed = NO;
         _enable = YES;
         _labelActiveColor = activeColor;
+        _labelNormalColor = normalColor;
         
         _labelNode = [SKLabelNode labelNodeWithFontNamed:@"Futura-CondensedExtraBold"];
         _labelNode.text = label;
@@ -192,7 +194,7 @@
     }
     self.buttonPressed = NO;
     if (_labelNode) {
-        _labelNode.fontColor = [SKColor whiteColor];
+        _labelNode.fontColor = self.labelNormalColor;
     }
     
     if (self.disableNormalImage) {
@@ -214,7 +216,7 @@
     self.normalSprite.hidden = NO;
     self.buttonPressed = NO;
     if (_labelNode) {
-        _labelNode.fontColor = [SKColor whiteColor];
+        _labelNode.fontColor = self.labelNormalColor;
     }
 }
 
@@ -284,7 +286,6 @@
         if ([node isKindOfClass:[SKLabelNode class]]) {
             ((SKLabelNode *)node).position = centerPoint;
         }
-        
     }
 }
 
