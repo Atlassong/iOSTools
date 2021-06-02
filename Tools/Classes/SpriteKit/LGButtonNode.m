@@ -274,6 +274,20 @@
     [self layoutSubNodes];
 }
 
+- (void)setXScale:(CGFloat)xScale {
+    [super setXScale:xScale];
+    for (SKNode *node in self.children) {
+        node.xScale = xScale;
+    }
+}
+
+- (void)setYScale:(CGFloat)yScale {
+    [super setYScale:yScale];
+    for (SKNode *node in self.children) {
+        node.yScale = yScale;
+    }
+}
+
 - (void)layoutSubNodes {
     CGPoint centerPoint = CGPointMake(self.size.width / 2.0 - self.anchorPoint.x * self.size.width, self.size.height / 2.0 - self.anchorPoint.y * self.size.height);
     for (SKNode *node in self.children) {
